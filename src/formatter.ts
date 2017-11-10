@@ -215,9 +215,8 @@ export default class Formatter {
         currTokenType = TokenType.EndOfBlock;
       } else if ( char == "/" && (
           (next == "/" && (pos > 0 ? text.charAt(pos-1) : "") != ":") // only `//` but not `://`
-           && next != "g" && next != "i" && next != "m" && next != "u" && next != "7"  // don't match regex flags
-          || next == "*")
-        ) {
+        || next == "*"
+      ) ) {
         currTokenType = TokenType.Comment;
       } else if ( char == ":" && next != ":" && (pos > 0 ? text.charAt(pos-1) : "") != "&" ) { // `&:` for css/sass
         currTokenType = TokenType.Colon;
