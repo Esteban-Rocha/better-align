@@ -53,7 +53,7 @@
                     "description": "A glob pattern that defines files to exclude while listing annotations"
                 },
                 "alignment.beforeSave": {
-                    "type": "Boolean",
+                    "type": "boolean",
                     "enum": [
                         true,
                         false
